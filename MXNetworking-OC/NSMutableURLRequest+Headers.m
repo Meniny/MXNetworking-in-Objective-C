@@ -10,7 +10,7 @@
 //
 
 #import "NSMutableURLRequest+Headers.h"
-#import "NSObject+Swizzle.h"
+#import "NSObject+MXSwizzle.h"
 
 static NSDictionary *standardHeaders = nil;
 
@@ -28,7 +28,7 @@ static NSDictionary *standardHeaders = nil;
 }
 
 + (void)extendHeadersWithSelector:(SEL)extendedHeadersSelector {
-    [[self class] swizzleSelector:@selector(applyStandardHeaders) withLocalSelector:extendedHeadersSelector];
+    [[self class] mx_swizzleSelector:@selector(applyStandardHeaders) withLocalSelector:extendedHeadersSelector];
 }
 
 - (void)applyStandardHeaders {

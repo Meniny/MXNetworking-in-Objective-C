@@ -22,7 +22,7 @@
 		5C658B111D2F49BE00BCA4AE /* NSJSONSerialization+RemovingNulls.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C658B051D2F49BE00BCA4AE /* NSJSONSerialization+RemovingNulls.m */; };
 		5C658B121D2F49BE00BCA4AE /* NSMutableURLRequest+Headers.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C658B071D2F49BE00BCA4AE /* NSMutableURLRequest+Headers.m */; };
 		5C658B131D2F49BE00BCA4AE /* RequestHeaderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C658B0A1D2F49BE00BCA4AE /* RequestHeaderManager.m */; };
-		5C658B161D2F4B9400BCA4AE /* NSObject+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C658B151D2F4B9400BCA4AE /* NSObject+Swizzle.m */; };
+		5CD817131D2F902800E0DDAA /* NSObject+MXSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD817121D2F902800E0DDAA /* NSObject+MXSwizzle.m */; };
 		89ADBC5CBDF58BC9F5AFE780 /* libPods-MXNetworking-OC-Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 174C12E123E78333B3910EEC /* libPods-MXNetworking-OC-Demo.a */; };
 /* End PBXBuildFile section */
 
@@ -57,8 +57,8 @@
 		5C658B071D2F49BE00BCA4AE /* NSMutableURLRequest+Headers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableURLRequest+Headers.m"; sourceTree = "<group>"; };
 		5C658B091D2F49BE00BCA4AE /* RequestHeaderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestHeaderManager.h; sourceTree = "<group>"; };
 		5C658B0A1D2F49BE00BCA4AE /* RequestHeaderManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestHeaderManager.m; sourceTree = "<group>"; };
-		5C658B141D2F4B9400BCA4AE /* NSObject+Swizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Swizzle.h"; sourceTree = "<group>"; };
-		5C658B151D2F4B9400BCA4AE /* NSObject+Swizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Swizzle.m"; sourceTree = "<group>"; };
+		5CD817111D2F902800E0DDAA /* NSObject+MXSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MXSwizzle.h"; sourceTree = "<group>"; };
+		5CD817121D2F902800E0DDAA /* NSObject+MXSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MXSwizzle.m"; sourceTree = "<group>"; };
 		8F1330F758C5A49868013300 /* Pods-MXNetworking-OC-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MXNetworking-OC-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MXNetworking-OC-Demo/Pods-MXNetworking-OC-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		F6D7BDF3248F5785C0B6417D /* Pods-MXNetworking-OC-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MXNetworking-OC-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MXNetworking-OC-Demo/Pods-MXNetworking-OC-Demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -161,8 +161,8 @@
 		5C658B181D2F4C1900BCA4AE /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				5C658B141D2F4B9400BCA4AE /* NSObject+Swizzle.h */,
-				5C658B151D2F4B9400BCA4AE /* NSObject+Swizzle.m */,
+				5CD817111D2F902800E0DDAA /* NSObject+MXSwizzle.h */,
+				5CD817121D2F902800E0DDAA /* NSObject+MXSwizzle.m */,
 				5C658B041D2F49BE00BCA4AE /* NSJSONSerialization+RemovingNulls.h */,
 				5C658B051D2F49BE00BCA4AE /* NSJSONSerialization+RemovingNulls.m */,
 				5C658B061D2F49BE00BCA4AE /* NSMutableURLRequest+Headers.h */,
@@ -309,8 +309,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CD817131D2F902800E0DDAA /* NSObject+MXSwizzle.m in Sources */,
 				5C658B0B1D2F49BE00BCA4AE /* MXNetworking+Authorization.m in Sources */,
-				5C658B161D2F4B9400BCA4AE /* NSObject+Swizzle.m in Sources */,
 				5C658B101D2F49BE00BCA4AE /* MXNetworking.m in Sources */,
 				5C658B121D2F49BE00BCA4AE /* NSMutableURLRequest+Headers.m in Sources */,
 				5C658AE71D2F492000BCA4AE /* ViewController.m in Sources */,
