@@ -16,8 +16,16 @@ static NSDictionary *standardHeaders = nil;
 
 @implementation NSMutableURLRequest (Headers)
 
-+ (NSDictionary *)standardHeaders{return standardHeaders;}
-+ (void)setStandardHeaders:(NSDictionary *)_standardHeaders{standardHeaders = _standardHeaders;}
++ (NSDictionary *)standardHeaders{
+    if (standardHeaders == nil) {
+        standardHeaders = @{};
+    }
+    return standardHeaders;
+}
+
++ (void)setStandardHeaders:(NSDictionary *)_standardHeaders{
+    standardHeaders = _standardHeaders;
+}
 
 + (void)extendHeadersWithSelector:(SEL)extendedHeadersSelector {
     [[self class] swizzleSelector:@selector(applyStandardHeaders) withLocalSelector:extendedHeadersSelector];

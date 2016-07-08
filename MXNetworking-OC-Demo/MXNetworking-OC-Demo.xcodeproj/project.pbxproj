@@ -1,0 +1,482 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5C658AE11D2F492000BCA4AE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C658AE01D2F492000BCA4AE /* main.m */; };
+		5C658AE41D2F492000BCA4AE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C658AE31D2F492000BCA4AE /* AppDelegate.m */; };
+		5C658AE71D2F492000BCA4AE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C658AE61D2F492000BCA4AE /* ViewController.m */; };
+		5C658AEA1D2F492000BCA4AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C658AE81D2F492000BCA4AE /* Main.storyboard */; };
+		5C658AEC1D2F492000BCA4AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C658AEB1D2F492000BCA4AE /* Assets.xcassets */; };
+		5C658AEF1D2F492000BCA4AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C658AED1D2F492000BCA4AE /* LaunchScreen.storyboard */; };
+		5C658B0B1D2F49BE00BCA4AE /* MXNetworking+Authorization.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C658AF81D2F49BE00BCA4AE /* MXNetworking+Authorization.m */; };
+		5C658B0C1D2F49BE00BCA4AE /* MXNetworking+Information.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C658AFA1D2F49BE00BCA4AE /* MXNetworking+Information.m */; };
+		5C658B0D1D2F49BE00BCA4AE /* MXNetworking+Logs.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C658AFC1D2F49BE00BCA4AE /* MXNetworking+Logs.m */; };
+		5C658B0E1D2F49BE00BCA4AE /* MXNetworking+Parsing.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C658AFE1D2F49BE00BCA4AE /* MXNetworking+Parsing.m */; };
+		5C658B0F1D2F49BE00BCA4AE /* MXNetworking+Quick.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C658B001D2F49BE00BCA4AE /* MXNetworking+Quick.m */; };
+		5C658B101D2F49BE00BCA4AE /* MXNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C658B021D2F49BE00BCA4AE /* MXNetworking.m */; };
+		5C658B111D2F49BE00BCA4AE /* NSJSONSerialization+RemovingNulls.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C658B051D2F49BE00BCA4AE /* NSJSONSerialization+RemovingNulls.m */; };
+		5C658B121D2F49BE00BCA4AE /* NSMutableURLRequest+Headers.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C658B071D2F49BE00BCA4AE /* NSMutableURLRequest+Headers.m */; };
+		5C658B131D2F49BE00BCA4AE /* RequestHeaderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C658B0A1D2F49BE00BCA4AE /* RequestHeaderManager.m */; };
+		5C658B161D2F4B9400BCA4AE /* NSObject+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C658B151D2F4B9400BCA4AE /* NSObject+Swizzle.m */; };
+		89ADBC5CBDF58BC9F5AFE780 /* libPods-MXNetworking-OC-Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 174C12E123E78333B3910EEC /* libPods-MXNetworking-OC-Demo.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		174C12E123E78333B3910EEC /* libPods-MXNetworking-OC-Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MXNetworking-OC-Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C658ADC1D2F492000BCA4AE /* MXNetworking-OC-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MXNetworking-OC-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C658AE01D2F492000BCA4AE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5C658AE21D2F492000BCA4AE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5C658AE31D2F492000BCA4AE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5C658AE51D2F492000BCA4AE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5C658AE61D2F492000BCA4AE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5C658AE91D2F492000BCA4AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5C658AEB1D2F492000BCA4AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5C658AEE1D2F492000BCA4AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5C658AF01D2F492000BCA4AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C658AF71D2F49BE00BCA4AE /* MXNetworking+Authorization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MXNetworking+Authorization.h"; sourceTree = "<group>"; };
+		5C658AF81D2F49BE00BCA4AE /* MXNetworking+Authorization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MXNetworking+Authorization.m"; sourceTree = "<group>"; };
+		5C658AF91D2F49BE00BCA4AE /* MXNetworking+Information.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MXNetworking+Information.h"; sourceTree = "<group>"; };
+		5C658AFA1D2F49BE00BCA4AE /* MXNetworking+Information.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MXNetworking+Information.m"; sourceTree = "<group>"; };
+		5C658AFB1D2F49BE00BCA4AE /* MXNetworking+Logs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MXNetworking+Logs.h"; sourceTree = "<group>"; };
+		5C658AFC1D2F49BE00BCA4AE /* MXNetworking+Logs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MXNetworking+Logs.m"; sourceTree = "<group>"; };
+		5C658AFD1D2F49BE00BCA4AE /* MXNetworking+Parsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MXNetworking+Parsing.h"; sourceTree = "<group>"; };
+		5C658AFE1D2F49BE00BCA4AE /* MXNetworking+Parsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MXNetworking+Parsing.m"; sourceTree = "<group>"; };
+		5C658AFF1D2F49BE00BCA4AE /* MXNetworking+Quick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MXNetworking+Quick.h"; sourceTree = "<group>"; };
+		5C658B001D2F49BE00BCA4AE /* MXNetworking+Quick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MXNetworking+Quick.m"; sourceTree = "<group>"; };
+		5C658B011D2F49BE00BCA4AE /* MXNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXNetworking.h; sourceTree = "<group>"; };
+		5C658B021D2F49BE00BCA4AE /* MXNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXNetworking.m; sourceTree = "<group>"; };
+		5C658B031D2F49BE00BCA4AE /* MXNetworkingMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXNetworkingMethods.h; sourceTree = "<group>"; };
+		5C658B041D2F49BE00BCA4AE /* NSJSONSerialization+RemovingNulls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSJSONSerialization+RemovingNulls.h"; sourceTree = "<group>"; };
+		5C658B051D2F49BE00BCA4AE /* NSJSONSerialization+RemovingNulls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSJSONSerialization+RemovingNulls.m"; sourceTree = "<group>"; };
+		5C658B061D2F49BE00BCA4AE /* NSMutableURLRequest+Headers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+Headers.h"; sourceTree = "<group>"; };
+		5C658B071D2F49BE00BCA4AE /* NSMutableURLRequest+Headers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableURLRequest+Headers.m"; sourceTree = "<group>"; };
+		5C658B091D2F49BE00BCA4AE /* RequestHeaderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestHeaderManager.h; sourceTree = "<group>"; };
+		5C658B0A1D2F49BE00BCA4AE /* RequestHeaderManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestHeaderManager.m; sourceTree = "<group>"; };
+		5C658B141D2F4B9400BCA4AE /* NSObject+Swizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Swizzle.h"; sourceTree = "<group>"; };
+		5C658B151D2F4B9400BCA4AE /* NSObject+Swizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Swizzle.m"; sourceTree = "<group>"; };
+		8F1330F758C5A49868013300 /* Pods-MXNetworking-OC-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MXNetworking-OC-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MXNetworking-OC-Demo/Pods-MXNetworking-OC-Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		F6D7BDF3248F5785C0B6417D /* Pods-MXNetworking-OC-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MXNetworking-OC-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MXNetworking-OC-Demo/Pods-MXNetworking-OC-Demo.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5C658AD91D2F492000BCA4AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89ADBC5CBDF58BC9F5AFE780 /* libPods-MXNetworking-OC-Demo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5C658AD31D2F492000BCA4AE = {
+			isa = PBXGroup;
+			children = (
+				5C658ADE1D2F492000BCA4AE /* MXNetworking-OC-Demo */,
+				5C658ADD1D2F492000BCA4AE /* Products */,
+				9AF6E80734ABF72F4DF1A4C9 /* Pods */,
+				C03CE854AB5899593049FD2B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5C658ADD1D2F492000BCA4AE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5C658ADC1D2F492000BCA4AE /* MXNetworking-OC-Demo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5C658ADE1D2F492000BCA4AE /* MXNetworking-OC-Demo */ = {
+			isa = PBXGroup;
+			children = (
+				5C658AF61D2F49BE00BCA4AE /* MXNetworking-OC */,
+				5C658AE21D2F492000BCA4AE /* AppDelegate.h */,
+				5C658AE31D2F492000BCA4AE /* AppDelegate.m */,
+				5C658AE51D2F492000BCA4AE /* ViewController.h */,
+				5C658AE61D2F492000BCA4AE /* ViewController.m */,
+				5C658AE81D2F492000BCA4AE /* Main.storyboard */,
+				5C658AEB1D2F492000BCA4AE /* Assets.xcassets */,
+				5C658AED1D2F492000BCA4AE /* LaunchScreen.storyboard */,
+				5C658AF01D2F492000BCA4AE /* Info.plist */,
+				5C658ADF1D2F492000BCA4AE /* Supporting Files */,
+			);
+			path = "MXNetworking-OC-Demo";
+			sourceTree = "<group>";
+		};
+		5C658ADF1D2F492000BCA4AE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5C658AE01D2F492000BCA4AE /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5C658AF61D2F49BE00BCA4AE /* MXNetworking-OC */ = {
+			isa = PBXGroup;
+			children = (
+				5C658B031D2F49BE00BCA4AE /* MXNetworkingMethods.h */,
+				5C658B171D2F4BF300BCA4AE /* Classes */,
+			);
+			name = "MXNetworking-OC";
+			path = "../../MXNetworking-OC";
+			sourceTree = "<group>";
+		};
+		5C658B081D2F49BE00BCA4AE /* RequestHeaderManager */ = {
+			isa = PBXGroup;
+			children = (
+				5C658B091D2F49BE00BCA4AE /* RequestHeaderManager.h */,
+				5C658B0A1D2F49BE00BCA4AE /* RequestHeaderManager.m */,
+			);
+			path = RequestHeaderManager;
+			sourceTree = "<group>";
+		};
+		5C658B171D2F4BF300BCA4AE /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5C658AFF1D2F49BE00BCA4AE /* MXNetworking+Quick.h */,
+				5C658B001D2F49BE00BCA4AE /* MXNetworking+Quick.m */,
+				5C658B011D2F49BE00BCA4AE /* MXNetworking.h */,
+				5C658B021D2F49BE00BCA4AE /* MXNetworking.m */,
+				5C658AF71D2F49BE00BCA4AE /* MXNetworking+Authorization.h */,
+				5C658AF81D2F49BE00BCA4AE /* MXNetworking+Authorization.m */,
+				5C658AF91D2F49BE00BCA4AE /* MXNetworking+Information.h */,
+				5C658AFA1D2F49BE00BCA4AE /* MXNetworking+Information.m */,
+				5C658AFB1D2F49BE00BCA4AE /* MXNetworking+Logs.h */,
+				5C658AFC1D2F49BE00BCA4AE /* MXNetworking+Logs.m */,
+				5C658AFD1D2F49BE00BCA4AE /* MXNetworking+Parsing.h */,
+				5C658AFE1D2F49BE00BCA4AE /* MXNetworking+Parsing.m */,
+				5C658B181D2F4C1900BCA4AE /* Categories */,
+				5C658B081D2F49BE00BCA4AE /* RequestHeaderManager */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		5C658B181D2F4C1900BCA4AE /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				5C658B141D2F4B9400BCA4AE /* NSObject+Swizzle.h */,
+				5C658B151D2F4B9400BCA4AE /* NSObject+Swizzle.m */,
+				5C658B041D2F49BE00BCA4AE /* NSJSONSerialization+RemovingNulls.h */,
+				5C658B051D2F49BE00BCA4AE /* NSJSONSerialization+RemovingNulls.m */,
+				5C658B061D2F49BE00BCA4AE /* NSMutableURLRequest+Headers.h */,
+				5C658B071D2F49BE00BCA4AE /* NSMutableURLRequest+Headers.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		9AF6E80734ABF72F4DF1A4C9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8F1330F758C5A49868013300 /* Pods-MXNetworking-OC-Demo.debug.xcconfig */,
+				F6D7BDF3248F5785C0B6417D /* Pods-MXNetworking-OC-Demo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C03CE854AB5899593049FD2B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				174C12E123E78333B3910EEC /* libPods-MXNetworking-OC-Demo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5C658ADB1D2F492000BCA4AE /* MXNetworking-OC-Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C658AF31D2F492000BCA4AE /* Build configuration list for PBXNativeTarget "MXNetworking-OC-Demo" */;
+			buildPhases = (
+				335F0B7FFE2CAEFC9EC75AE4 /* [CP] Check Pods Manifest.lock */,
+				5C658AD81D2F492000BCA4AE /* Sources */,
+				5C658AD91D2F492000BCA4AE /* Frameworks */,
+				5C658ADA1D2F492000BCA4AE /* Resources */,
+				0134025156F2B1D4EF42C303 /* [CP] Embed Pods Frameworks */,
+				36DB4B3DB95E04818210EC61 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MXNetworking-OC-Demo";
+			productName = "MXNetworking-OC-Demo";
+			productReference = 5C658ADC1D2F492000BCA4AE /* MXNetworking-OC-Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5C658AD41D2F492000BCA4AE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Meniny;
+				TargetAttributes = {
+					5C658ADB1D2F492000BCA4AE = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 5C658AD71D2F492000BCA4AE /* Build configuration list for PBXProject "MXNetworking-OC-Demo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5C658AD31D2F492000BCA4AE;
+			productRefGroup = 5C658ADD1D2F492000BCA4AE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5C658ADB1D2F492000BCA4AE /* MXNetworking-OC-Demo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5C658ADA1D2F492000BCA4AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C658AEF1D2F492000BCA4AE /* LaunchScreen.storyboard in Resources */,
+				5C658AEC1D2F492000BCA4AE /* Assets.xcassets in Resources */,
+				5C658AEA1D2F492000BCA4AE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0134025156F2B1D4EF42C303 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MXNetworking-OC-Demo/Pods-MXNetworking-OC-Demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		335F0B7FFE2CAEFC9EC75AE4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		36DB4B3DB95E04818210EC61 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MXNetworking-OC-Demo/Pods-MXNetworking-OC-Demo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5C658AD81D2F492000BCA4AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C658B0B1D2F49BE00BCA4AE /* MXNetworking+Authorization.m in Sources */,
+				5C658B161D2F4B9400BCA4AE /* NSObject+Swizzle.m in Sources */,
+				5C658B101D2F49BE00BCA4AE /* MXNetworking.m in Sources */,
+				5C658B121D2F49BE00BCA4AE /* NSMutableURLRequest+Headers.m in Sources */,
+				5C658AE71D2F492000BCA4AE /* ViewController.m in Sources */,
+				5C658B111D2F49BE00BCA4AE /* NSJSONSerialization+RemovingNulls.m in Sources */,
+				5C658B0C1D2F49BE00BCA4AE /* MXNetworking+Information.m in Sources */,
+				5C658B0D1D2F49BE00BCA4AE /* MXNetworking+Logs.m in Sources */,
+				5C658B0F1D2F49BE00BCA4AE /* MXNetworking+Quick.m in Sources */,
+				5C658AE41D2F492000BCA4AE /* AppDelegate.m in Sources */,
+				5C658B0E1D2F49BE00BCA4AE /* MXNetworking+Parsing.m in Sources */,
+				5C658B131D2F49BE00BCA4AE /* RequestHeaderManager.m in Sources */,
+				5C658AE11D2F492000BCA4AE /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5C658AE81D2F492000BCA4AE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C658AE91D2F492000BCA4AE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5C658AED1D2F492000BCA4AE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C658AEE1D2F492000BCA4AE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5C658AF11D2F492000BCA4AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5C658AF21D2F492000BCA4AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5C658AF41D2F492000BCA4AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F1330F758C5A49868013300 /* Pods-MXNetworking-OC-Demo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "MXNetworking-OC-Demo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.meniny.MXNetworking-OC-Demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5C658AF51D2F492000BCA4AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6D7BDF3248F5785C0B6417D /* Pods-MXNetworking-OC-Demo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "MXNetworking-OC-Demo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.meniny.MXNetworking-OC-Demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5C658AD71D2F492000BCA4AE /* Build configuration list for PBXProject "MXNetworking-OC-Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C658AF11D2F492000BCA4AE /* Debug */,
+				5C658AF21D2F492000BCA4AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C658AF31D2F492000BCA4AE /* Build configuration list for PBXNativeTarget "MXNetworking-OC-Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C658AF41D2F492000BCA4AE /* Debug */,
+				5C658AF51D2F492000BCA4AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5C658AD41D2F492000BCA4AE /* Project object */;
+}
