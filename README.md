@@ -4,7 +4,9 @@
 
 ## Installation with CocoaPods
 
-Coming soon...
+```
+pod 'MXNetworking'
+```
 
 ## Usage
 
