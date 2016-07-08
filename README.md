@@ -44,3 +44,20 @@ NSString *url = [MXNetworking urlByAppendingParameters:@{
   }
 }];
 ```
+
+## Trouble Shooting
+
+* ATS
+
+Add this to your `Info.plist` file:
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSAllowsArbitraryLoads</key>
+	<true/>
+</dict>
+</plist>
+```
