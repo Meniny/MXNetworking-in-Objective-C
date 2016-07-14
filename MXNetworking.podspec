@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "MXNetworking"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "A delightful networking framework for iOS platform."
 
   # This description is used to generate tags and improve search results.
@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  s.description  = "The first stable version of MXNetworing, a delightful networking framework for iOS platform."
+  s.description  = "A stable version of MXNetworing, a delightful networking framework for iOS platform."
 
   s.homepage     = "https://github.com/Meniny/MXNetworking-in-Objective-C"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
