@@ -15,6 +15,7 @@
 #import "MXNetworking+Information.h"
 #import "MXNetworking+Logs.h"
 #import "Reachability.h"
+#import "MXNetworingRequestCountManager.h"
 
 NSString * const kContentLengthKey = @"Content-Length";
 NSString * const kContentTypeKey   = @"Content-Type";
@@ -201,6 +202,7 @@ NSString * const kContentTypeMultipart = @"multipart/form-data";
     [self logRequest:request];
     
     if (self.shouldShowNetworkIndicator) {
+        [MXNetworingRequestCountManager addCount];
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     }
     
@@ -213,7 +215,10 @@ NSString * const kContentTypeMultipart = @"multipart/form-data";
     [self logReturnWithData:returnData statusCode:*statusCode andError:error];
     
     if (self.shouldShowNetworkIndicator) {
-        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+        [MXNetworingRequestCountManager subtractCount];
+        if (![MXNetworingRequestCountManager currentCount]) {
+            [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+        }
     }
     
     return returnData;

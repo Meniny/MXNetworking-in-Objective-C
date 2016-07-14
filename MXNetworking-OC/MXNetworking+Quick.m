@@ -12,6 +12,7 @@
 #import "MXNetworking+Quick.h"
 #import "MXNetworking+Information.h"
 #import <UIKit/UIKit.h>
+#import "MXNetworingRequestCountManager.h"
 
 typedef enum : NSUInteger {
     MXRequestMethodTypeGET = 1,
@@ -23,9 +24,7 @@ typedef enum : NSUInteger {
 @implementation MXNetworking (Quick)
 
 + (void)getRequestByAppending:(NSString *)urlString forType:(RequestType)type data:(NSData *)data callback:(FullResponseCallback)callback {
-    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     [self requestWithURL:[self URLByAppendingStringToBaseURL:urlString] forType:type httpMethod:kHTTPMethodGet data:data callback:^(ResponseStatus status, id responseObject) {
-        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
         if (callback) {
             callback(status, responseObject);
         }
@@ -33,9 +32,7 @@ typedef enum : NSUInteger {
 }
 
 + (void)postRequestByAppending:(NSString *)urlString forType:(RequestType)type data:(NSData *)data callback:(FullResponseCallback)callback {
-    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     [self requestWithURL:[self URLByAppendingStringToBaseURL:urlString] forType:type httpMethod:kHTTPMethodPost data:data callback:^(ResponseStatus status, id responseObject) {
-        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
         if (callback) {
             callback(status, responseObject);
         }
@@ -43,9 +40,7 @@ typedef enum : NSUInteger {
 }
 
 + (void)putRequestByAppending:(NSString *)urlString forType:(RequestType)type data:(NSData *)data callback:(FullResponseCallback)callback {
-    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     [self requestWithURL:[self URLByAppendingStringToBaseURL:urlString] forType:type httpMethod:kHTTPMethodPut data:data callback:^(ResponseStatus status, id responseObject) {
-        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
         if (callback) {
             callback(status, responseObject);
         }
@@ -53,9 +48,7 @@ typedef enum : NSUInteger {
 }
 
 + (void)deleteRequestByAppending:(NSString *)urlString forType:(RequestType)type data:(NSData *)data callback:(FullResponseCallback)callback {
-    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     [self requestWithURL:[self URLByAppendingStringToBaseURL:urlString] forType:type httpMethod:kHTTPMethodDelete data:data callback:^(ResponseStatus status, id responseObject) {
-        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
         if (callback) {
             callback(status, responseObject);
         }

@@ -23,6 +23,7 @@
 		5C658B121D2F49BE00BCA4AE /* NSMutableURLRequest+Headers.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C658B071D2F49BE00BCA4AE /* NSMutableURLRequest+Headers.m */; };
 		5C658B131D2F49BE00BCA4AE /* RequestHeaderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C658B0A1D2F49BE00BCA4AE /* RequestHeaderManager.m */; };
 		5CD817131D2F902800E0DDAA /* NSObject+MXSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD817121D2F902800E0DDAA /* NSObject+MXSwizzle.m */; };
+		5CD9D5261D377D8900619E15 /* MXNetworingRequestCountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD9D5251D377D8900619E15 /* MXNetworingRequestCountManager.m */; };
 		89ADBC5CBDF58BC9F5AFE780 /* libPods-MXNetworking-OC-Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 174C12E123E78333B3910EEC /* libPods-MXNetworking-OC-Demo.a */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,8 @@
 		5C658B0A1D2F49BE00BCA4AE /* RequestHeaderManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestHeaderManager.m; sourceTree = "<group>"; };
 		5CD817111D2F902800E0DDAA /* NSObject+MXSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MXSwizzle.h"; sourceTree = "<group>"; };
 		5CD817121D2F902800E0DDAA /* NSObject+MXSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MXSwizzle.m"; sourceTree = "<group>"; };
+		5CD9D5241D377D8900619E15 /* MXNetworingRequestCountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXNetworingRequestCountManager.h; sourceTree = "<group>"; };
+		5CD9D5251D377D8900619E15 /* MXNetworingRequestCountManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXNetworingRequestCountManager.m; sourceTree = "<group>"; };
 		8F1330F758C5A49868013300 /* Pods-MXNetworking-OC-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MXNetworking-OC-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MXNetworking-OC-Demo/Pods-MXNetworking-OC-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		F6D7BDF3248F5785C0B6417D /* Pods-MXNetworking-OC-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MXNetworking-OC-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MXNetworking-OC-Demo/Pods-MXNetworking-OC-Demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -152,6 +155,8 @@
 				5C658AFC1D2F49BE00BCA4AE /* MXNetworking+Logs.m */,
 				5C658AFD1D2F49BE00BCA4AE /* MXNetworking+Parsing.h */,
 				5C658AFE1D2F49BE00BCA4AE /* MXNetworking+Parsing.m */,
+				5CD9D5241D377D8900619E15 /* MXNetworingRequestCountManager.h */,
+				5CD9D5251D377D8900619E15 /* MXNetworingRequestCountManager.m */,
 				5C658B181D2F4C1900BCA4AE /* Categories */,
 				5C658B081D2F49BE00BCA4AE /* RequestHeaderManager */,
 			);
@@ -321,6 +326,7 @@
 				5C658AE41D2F492000BCA4AE /* AppDelegate.m in Sources */,
 				5C658B0E1D2F49BE00BCA4AE /* MXNetworking+Parsing.m in Sources */,
 				5C658B131D2F49BE00BCA4AE /* RequestHeaderManager.m in Sources */,
+				5CD9D5261D377D8900619E15 /* MXNetworingRequestCountManager.m in Sources */,
 				5C658AE11D2F492000BCA4AE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
