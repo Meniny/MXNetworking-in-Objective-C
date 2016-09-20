@@ -213,7 +213,7 @@ NSString * const kContentTypeMultipart = @"multipart/form-data";
     *statusCode = [(NSHTTPURLResponse *)response statusCode];
     
 //    [self logReturnWithData:returnData statusCode:*statusCode andError:error];
-    [self logRequest:request data:returnData statusCode:*statusCode andError:error];
+    [self logRequest:request standardHeaders:[NSMutableURLRequest standardHeaders] data:returnData statusCode:*statusCode andError:error];
     
     if (self.shouldShowNetworkIndicator) {
         [MXNetworingRequestCountManager subtractCount];

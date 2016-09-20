@@ -12,33 +12,47 @@
 
 #import "MXNetworking+Logs.h"
 #import "MXNetworking+Parsing.h"
-#import "NSMutableURLRequest+Headers.h"
 
 #define MAX_BODY_LENGTH 16384
 
 @implementation MXNetworking (Logs)
 
-+ (void)logRequest:(NSURLRequest *)request {
-//#ifdef DEBUG
-    NSLog(@"%@", [MXNetworking stringWithRequest:request]);
-//#endif
++ (void)logRequest:(NSURLRequest *)request standardHeaders:(NSDictionary *)standardHeaders data:(NSData *)data statusCode:(NSInteger)statusCode andError:(NSError *)error {
+#ifdef DEBUG
+    NSString *log = [MXNetworking stringWithRequest:request standardHeaders:standardHeaders data:data statusCode:statusCode andError:error];
+    // NSLog will not print the whole string while it's too long
+    printf("\n%s", [log cStringUsingEncoding:NSUTF8StringEncoding]);
+#endif
 }
 
-+ (NSString *)stringWithRequest:(NSURLRequest *)request {
-    NSMutableDictionary *standardHeaders = [[NSMutableURLRequest standardHeaders] mutableCopy];
-//    NSMutableArray <NSString *>* headersArray = [NSMutableArray array];
-//    for (NSString *key in [standardHeaders allKeys]) {
-//        [headersArray addObject:[NSString stringWithFormat:@"%@: %@", key, [standardHeaders objectForKey:key]]];
-//    }
-    
-    NSMutableString *log = [NSMutableString new];
-    [log appendString:@"● Headers:"];
-//    if ([headersArray count]) {
-        [log appendString:@"\n"];
-//        [log appendString:[headersArray componentsJoinedByString:@"\n"]];
-        [log appendFormat:@"%@", standardHeaders];
-//}
++ (NSString *)stringWithRequest:(NSURLRequest *)request standardHeaders:(NSDictionary *)standardHeaders data:(NSData *)data statusCode:(NSInteger)statusCode andError:(NSError *)error {
+    NSString *log1 = [MXNetworking stringWithRequest:request standardHeaders:standardHeaders];
+    NSString *log2 = [MXNetworking stringWithData:data statusCode:statusCode andError:error];
+    NSString *log = [NSString stringWithFormat:@"%@\n%@", log1, log2];
+    return log;
+}
 
+#pragma mark Unicode
++ (NSString *)stringByReplacingUnicodeWithUTF8:(NSString *)string {
+    if (string == nil) {
+        return @"";
+    }
+    NSString *tempStr1 = [string stringByReplacingOccurrencesOfString:@"\\u"withString:@"\\U"];
+    if (![tempStr1 containsString:@"\\U"]) {
+        return string;
+    }
+    NSString *tempStr2 = [tempStr1 stringByReplacingOccurrencesOfString:@"\""withString:@"\\\""];
+    NSString *tempStr3 = [[@"\""stringByAppendingString:tempStr2]stringByAppendingString:@"\""];
+    NSData *tempData = [tempStr3 dataUsingEncoding:NSUTF8StringEncoding];
+    NSString *tempStr4 = [NSPropertyListSerialization propertyListWithData:tempData options:NSPropertyListImmutable format:NULL error:nil];
+    NSString *result = [tempStr4 stringByReplacingOccurrencesOfString:@"\\r\\n"withString:@"\n"];
+    if (result == nil) {
+        result = @"";
+    }
+    return result;
+}
+
++ (NSString *)stringWithRequest:(NSURLRequest *)request standardHeaders:(NSDictionary *)standardHeaders {
     NSMutableString *curlString = [NSMutableString new];
     [curlString appendString:@"curl -H"];
     
@@ -50,20 +64,23 @@
     [curlString appendFormat:@" -X %@", request.HTTPMethod];
     
     // Data
-    /*if(request.HTTPBody.length && request.HTTPBody.length < MAX_BODY_LENGTH)*/[curlString appendFormat:@" --data '%@'", [[[[NSString alloc] initWithData:request.HTTPBody encoding:NSUTF8StringEncoding] stringByReplacingOccurrencesOfString:@"\n" withString:@""] stringByReplacingOccurrencesOfString:@"\r" withString:@" "]];
+    /*if(request.HTTPBody.length && request.HTTPBody.length < MAX_BODY_LENGTH)*/
+    NSString *dataString = [[NSString alloc] initWithData:request.HTTPBody encoding:NSUTF8StringEncoding];
+    if (dataString == nil) {
+        dataString = @"";
+    } else {
+        dataString = [[dataString stringByReplacingOccurrencesOfString:@"\n" withString:@""] stringByReplacingOccurrencesOfString:@"\r" withString:@" "];
+    }
+    [curlString appendFormat:@" --data '%@'", dataString];
     
     // URL
     [curlString appendFormat:@" %@", request.URL.description];
     
-    [log appendFormat:@"\n● %@", curlString];
+    id headerString = ((standardHeaders != nil) ? standardHeaders : @"{}");
     
-    return log;
-}
-
-+ (void)logReturnWithData:(NSData *)data statusCode:(NSInteger)statusCode andError:(NSError *)error {
-    //#ifdef DEBUG
-    NSLog(@"%@", [MXNetworking stringWithData:data statusCode:statusCode andError:error]);
-    //#endif
+    NSString *log = [NSString stringWithFormat:@"● %@\n● Headers:\n%@", curlString, headerString];
+    
+    return [MXNetworking stringByReplacingUnicodeWithUTF8:log];
 }
 
 + (NSString *)stringWithData:(NSData *)data statusCode:(NSInteger)statusCode andError:(NSError *)error {
@@ -71,18 +88,26 @@
 
     [log appendFormat:@"● Status Code: %zd", statusCode];
 
-    if(error) {
+    if (error) {
         [log appendFormat:@"\n● Error:\n%@", ([error localizedDescription] ? [error localizedDescription] : [error description])];
     }
     
-    /*(data.length <= MAX_BODY_LENGTH ? *//* : @"Body data was too large; could not output")*/
-    [log appendFormat:@"\n● Response:\n%@", [self parseJSONData:data]];
+    id response = [MXNetworking parseJSONData:data];
     
-    return log;
-}
-
-+ (void)logRequest:(NSURLRequest *)request data:(NSData *)data statusCode:(NSInteger)statusCode andError:(NSError *)error {
-    NSLog(@"\n%@\n%@", [MXNetworking stringWithRequest:request], [MXNetworking stringWithData:data statusCode:statusCode andError:error]);
+    NSUInteger length = (data ? [data length] : 0);
+    
+    [log appendFormat:@"\n● Response [%zd]:", length];
+    
+    if (response) {
+        [log appendFormat:@"\n%@", response];
+    } else {
+        [log appendString:@" NULL"];
+    }
+    
+    /*data.length <= MAX_BODY_LENGTH*/
+    /*@"Body data was too large; could not output"*/
+    
+    return [MXNetworking stringByReplacingUnicodeWithUTF8:log];
 }
 
 @end

@@ -42,9 +42,9 @@ const NSString * kContentDispositionKey = @"Content-Disposition";
         NSObject *object = dictionary[key];
         
         // We only want to add NSString objects to the string
-        if([object isKindOfClass:[NSString class]]) {
+//        if([object isKindOfClass:[NSString class]]) {
             [parameterString appendFormat:@"%@=%@&", key, object];
-        }
+//        }
     }
     
     return parameterString;

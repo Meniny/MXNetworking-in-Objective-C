@@ -12,8 +12,5 @@
 #import "MXNetworking.h"
 
 @interface MXNetworking (Logs)
-
-+ (void)logRequest:(NSURLRequest *)request;
-+ (void)logReturnWithData:(NSData *)data statusCode:(NSInteger)statusCode andError:(NSError *)error;
-+ (void)logRequest:(NSURLRequest *)request data:(NSData *)data statusCode:(NSInteger)statusCode andError:(NSError *)error;
++ (void)logRequest:(NSURLRequest *)request standardHeaders:(NSDictionary *)standardHeaders data:(NSData *)data statusCode:(NSInteger)statusCode andError:(NSError *)error;
 @end

@@ -92,7 +92,6 @@
                 if (success) {
                     [[weakSelf dataSource] removeAllObjects];
                     [[weakSelf dataSource] addObjectsFromArray:urls];
-                    NSLog(@"%@", [weakSelf dataSource]);
                     // Reload
                 } else {
                     NSLog(@"Error");
