@@ -199,7 +199,7 @@ NSString * const kContentTypeMultipart = @"multipart/form-data";
 }
 
 + (NSData *)sendRequest:(NSMutableURLRequest *)request withStatusCodePointer:(NSInteger *)statusCode {
-    [self logRequest:request];
+//    [self logRequest:request];
     
     if (self.shouldShowNetworkIndicator) {
         [MXNetworingRequestCountManager addCount];
@@ -212,7 +212,8 @@ NSString * const kContentTypeMultipart = @"multipart/form-data";
     
     *statusCode = [(NSHTTPURLResponse *)response statusCode];
     
-    [self logReturnWithData:returnData statusCode:*statusCode andError:error];
+//    [self logReturnWithData:returnData statusCode:*statusCode andError:error];
+    [self logRequest:request data:returnData statusCode:*statusCode andError:error];
     
     if (self.shouldShowNetworkIndicator) {
         [MXNetworingRequestCountManager subtractCount];
