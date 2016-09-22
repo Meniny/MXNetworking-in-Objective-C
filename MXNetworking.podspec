@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "MXNetworking"
-  s.version      = "1.1.1"
+  s.version      = "1.1.2"
   s.summary      = "A delightful networking framework for iOS platform."
 
   # This description is used to generate tags and improve search results.
