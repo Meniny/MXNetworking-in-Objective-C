@@ -17,18 +17,26 @@
 
 @implementation MXNetworking (Logs)
 
-+ (void)logRequest:(NSURLRequest *)request standardHeaders:(NSDictionary *)standardHeaders data:(NSData *)data statusCode:(NSInteger)statusCode andError:(NSError *)error {
++ (void)logRequest:(NSURLRequest *)request standardHeaders:(NSDictionary *)standardHeaders date:(NSDate *)date data:(NSData *)data statusCode:(NSInteger)statusCode andError:(NSError *)error {
+    /*
+     1. Add "-D DEBUG" to "Project -> Target -> Build Settings - Other Swift Flags -> Debug"
+     2. Add "DEBUG=1" to "Project -> Target -> Build Settings - Apple LLVM x.x - Preprocessiong -> Preprocessor Macros -> Debug"
+     */
+    
 #ifdef DEBUG
-    NSString *log = [MXNetworking stringWithRequest:request standardHeaders:standardHeaders data:data statusCode:statusCode andError:error];
+    NSString *sep = @"---------------------";
+    NSString *log = [NSString stringWithFormat:@"\n%@\n%@\n%@", sep, [MXNetworking stringWithRequest:request standardHeaders:standardHeaders date:date data:data statusCode:statusCode andError:error], sep];
     // NSLog will not print the whole string while it's too long
-    printf("\n%s", [log cStringUsingEncoding:NSUTF8StringEncoding]);
+    printf("%s", [log cStringUsingEncoding:NSUTF8StringEncoding]);
 #endif
 }
 
-+ (NSString *)stringWithRequest:(NSURLRequest *)request standardHeaders:(NSDictionary *)standardHeaders data:(NSData *)data statusCode:(NSInteger)statusCode andError:(NSError *)error {
++ (NSString *)stringWithRequest:(NSURLRequest *)request standardHeaders:(NSDictionary *)standardHeaders date:(NSDate *)date data:(NSData *)data statusCode:(NSInteger)statusCode andError:(NSError *)error {
     NSString *log1 = [MXNetworking stringWithRequest:request standardHeaders:standardHeaders];
-    NSString *log2 = [MXNetworking stringWithData:data statusCode:statusCode andError:error];
-    NSString *log = [NSString stringWithFormat:@"%@\n%@", log1, log2];
+    NSTimeInterval duration = [[NSDate date] timeIntervalSinceDate:date];
+    NSString *log2 = [NSString stringWithFormat:@"● Time Consuming: %lf", duration];
+    NSString *log3 = [MXNetworking stringWithData:data statusCode:statusCode andError:error];
+    NSString *log = [NSString stringWithFormat:@"%@\n%@\n%@", log1, log2, log3];
     return log;
 }
 

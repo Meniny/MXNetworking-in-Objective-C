@@ -9,7 +9,7 @@
 //  See http://www.meniny.cn/ for more informations.
 //
 
-#import "MXNetworking.h"
+#import "MXNetworkingMethods.h"
 
 @interface MXNetworking (Information)
 

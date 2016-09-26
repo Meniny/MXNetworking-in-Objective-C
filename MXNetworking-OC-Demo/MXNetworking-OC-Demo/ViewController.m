@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "MXNetworkingMethods.h"
+#import "MXNetworking.h"
 
 @interface ViewController ()
 @property (strong, nonatomic) NSMutableArray <NSString *>* dataSource;
@@ -65,7 +65,7 @@
                                                                @"sexyfilter": sexy,
                                                                @"version": version
                                                                } toURL:@"/json_daily.php"];
-            [MXNetworking getRequestByAppending:url forType:RequestTypeURL data:nil callback:^(ResponseStatus status, id responseObject) {
+            [MXNetworking getRequestByAppending:url forType:RequestTypeURL data:nil callback:^(ResponseStatus status, id responseObject, NSError *error) {
                 // Main Thread:
                 BOOL success = NO;
                 NSMutableArray <NSString *>*urls = [NSMutableArray array];

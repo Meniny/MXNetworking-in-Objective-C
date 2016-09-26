@@ -32,11 +32,15 @@ static NSURLRequestCachePolicy policy = NSURLRequestUseProtocolCachePolicy;
 + (NSURL *)URLByAppendingStringToBaseURL:(NSString *)specificAPICallString {
     NSString *url;
     if ([self baseURLString] != nil && [[self baseURLString] length]) {
-        url = [NSString stringWithFormat:@"%@%@%@", [self baseURLString], [specificAPICallString hasPrefix:@"/"] ? @"" : @"/", specificAPICallString];
+        if ([specificAPICallString hasPrefix:@"/"] || [[self baseURLString] hasSuffix:@"/"]) {
+            url = [NSString stringWithFormat:@"%@%@", [self baseURLString], specificAPICallString];
+        } else {
+            url = [NSString stringWithFormat:@"%@/%@", [self baseURLString], specificAPICallString];
+        }
     } else {
         url = specificAPICallString;
     }
-    return [NSURL URLWithString:url];
+    return [NSURL URLWithString:[url stringByReplacingOccurrencesOfString:@"//" withString:@"/"]];
 }
 
 + (NSString *)urlByAppendingParameters:(NSDictionary <NSString *, id> *)params toURL:(NSString *)url {

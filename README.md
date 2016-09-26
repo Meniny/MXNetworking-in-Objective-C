@@ -10,16 +10,20 @@ pod 'MXNetworking'
 
 ## Usage
 
+```objective-c
+#import "MXNetworking.h"
+```
+
 * Base URL
 
-```
+```objective-c
 #pragma mark BASR URL
 [MXNetworking setBaseURLString:@"http://exp.yourdomain.com"];
 ```
 
 * Request Headers
 
-```
+```objective-c
 #pragma mark REQUEST HEADERS
 NSMutableDictionary *headers = [[NSMutableURLRequest standardHeaders] mutableCopy];
 [headers setValue:@"MXNetworkingDemo/1.0 CFNetwork/758.1.6 Darwin/15.0.0" forKey:@"User-Agent"];
@@ -29,7 +33,7 @@ NSMutableDictionary *headers = [[NSMutableURLRequest standardHeaders] mutableCop
 
 * Sample Request
 
-```
+```objective-c
 NSString *version = @"1.0";
 NSString *device = @"iphone6";
 NSString *url = [MXNetworking urlByAppendingParameters:@{
@@ -37,7 +41,7 @@ NSString *url = [MXNetworking urlByAppendingParameters:@{
                                              @"version": version
                                              } toURL:@"/exp_name.php"];
 
-[MXNetworking getRequestByAppending:url forType:RequestTypeURL data:nil callback:^(ResponseStatus status, id responseObject) {
+[MXNetworking getRequestByAppending:url forType:RequestTypeURL data:nil callback:^(ResponseStatus status, id responseObject, NSError *error) {
   // Main Thread:
   if (status == ResponseStatus200) {
     // code here...
@@ -53,7 +57,7 @@ NSString *url = [MXNetworking urlByAppendingParameters:@{
 
 Add this to your `Info.plist` file:
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">

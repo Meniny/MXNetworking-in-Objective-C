@@ -9,8 +9,8 @@
 //  See http://www.meniny.cn/ for more informations.
 //
 
-#import "MXNetworking.h"
+#import "MXNetworkingMethods.h"
 
 @interface MXNetworking (Logs)
-+ (void)logRequest:(NSURLRequest *)request standardHeaders:(NSDictionary *)standardHeaders data:(NSData *)data statusCode:(NSInteger)statusCode andError:(NSError *)error;
++ (void)logRequest:(NSURLRequest *)request standardHeaders:(NSDictionary *)standardHeaders date:(NSDate *)date data:(NSData *)data statusCode:(NSInteger)statusCode andError:(NSError *)error;
 @end

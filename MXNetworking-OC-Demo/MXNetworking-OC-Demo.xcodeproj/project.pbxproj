@@ -17,8 +17,7 @@
 		5C658B0C1D2F49BE00BCA4AE /* MXNetworking+Information.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C658AFA1D2F49BE00BCA4AE /* MXNetworking+Information.m */; };
 		5C658B0D1D2F49BE00BCA4AE /* MXNetworking+Logs.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C658AFC1D2F49BE00BCA4AE /* MXNetworking+Logs.m */; };
 		5C658B0E1D2F49BE00BCA4AE /* MXNetworking+Parsing.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C658AFE1D2F49BE00BCA4AE /* MXNetworking+Parsing.m */; };
-		5C658B0F1D2F49BE00BCA4AE /* MXNetworking+Quick.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C658B001D2F49BE00BCA4AE /* MXNetworking+Quick.m */; };
-		5C658B101D2F49BE00BCA4AE /* MXNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C658B021D2F49BE00BCA4AE /* MXNetworking.m */; };
+		5C658B101D2F49BE00BCA4AE /* MXNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C658B021D2F49BE00BCA4AE /* MXNetworkingMethods.m */; };
 		5C658B111D2F49BE00BCA4AE /* NSJSONSerialization+RemovingNulls.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C658B051D2F49BE00BCA4AE /* NSJSONSerialization+RemovingNulls.m */; };
 		5C658B121D2F49BE00BCA4AE /* NSMutableURLRequest+Headers.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C658B071D2F49BE00BCA4AE /* NSMutableURLRequest+Headers.m */; };
 		5C658B131D2F49BE00BCA4AE /* RequestHeaderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C658B0A1D2F49BE00BCA4AE /* RequestHeaderManager.m */; };
@@ -47,11 +46,9 @@
 		5C658AFC1D2F49BE00BCA4AE /* MXNetworking+Logs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MXNetworking+Logs.m"; sourceTree = "<group>"; };
 		5C658AFD1D2F49BE00BCA4AE /* MXNetworking+Parsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MXNetworking+Parsing.h"; sourceTree = "<group>"; };
 		5C658AFE1D2F49BE00BCA4AE /* MXNetworking+Parsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MXNetworking+Parsing.m"; sourceTree = "<group>"; };
-		5C658AFF1D2F49BE00BCA4AE /* MXNetworking+Quick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MXNetworking+Quick.h"; sourceTree = "<group>"; };
-		5C658B001D2F49BE00BCA4AE /* MXNetworking+Quick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MXNetworking+Quick.m"; sourceTree = "<group>"; };
-		5C658B011D2F49BE00BCA4AE /* MXNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXNetworking.h; sourceTree = "<group>"; };
-		5C658B021D2F49BE00BCA4AE /* MXNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXNetworking.m; sourceTree = "<group>"; };
-		5C658B031D2F49BE00BCA4AE /* MXNetworkingMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXNetworkingMethods.h; sourceTree = "<group>"; };
+		5C658B011D2F49BE00BCA4AE /* MXNetworkingMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXNetworkingMethods.h; sourceTree = "<group>"; };
+		5C658B021D2F49BE00BCA4AE /* MXNetworkingMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXNetworkingMethods.m; sourceTree = "<group>"; };
+		5C658B031D2F49BE00BCA4AE /* MXNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXNetworking.h; sourceTree = "<group>"; };
 		5C658B041D2F49BE00BCA4AE /* NSJSONSerialization+RemovingNulls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSJSONSerialization+RemovingNulls.h"; sourceTree = "<group>"; };
 		5C658B051D2F49BE00BCA4AE /* NSJSONSerialization+RemovingNulls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSJSONSerialization+RemovingNulls.m"; sourceTree = "<group>"; };
 		5C658B061D2F49BE00BCA4AE /* NSMutableURLRequest+Headers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+Headers.h"; sourceTree = "<group>"; };
@@ -124,7 +121,7 @@
 		5C658AF61D2F49BE00BCA4AE /* MXNetworking-OC */ = {
 			isa = PBXGroup;
 			children = (
-				5C658B031D2F49BE00BCA4AE /* MXNetworkingMethods.h */,
+				5C658B031D2F49BE00BCA4AE /* MXNetworking.h */,
 				5C658B171D2F4BF300BCA4AE /* Classes */,
 			);
 			name = "MXNetworking-OC";
@@ -143,10 +140,8 @@
 		5C658B171D2F4BF300BCA4AE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				5C658AFF1D2F49BE00BCA4AE /* MXNetworking+Quick.h */,
-				5C658B001D2F49BE00BCA4AE /* MXNetworking+Quick.m */,
-				5C658B011D2F49BE00BCA4AE /* MXNetworking.h */,
-				5C658B021D2F49BE00BCA4AE /* MXNetworking.m */,
+				5C658B011D2F49BE00BCA4AE /* MXNetworkingMethods.h */,
+				5C658B021D2F49BE00BCA4AE /* MXNetworkingMethods.m */,
 				5C658AF71D2F49BE00BCA4AE /* MXNetworking+Authorization.h */,
 				5C658AF81D2F49BE00BCA4AE /* MXNetworking+Authorization.m */,
 				5C658AF91D2F49BE00BCA4AE /* MXNetworking+Information.h */,
@@ -317,13 +312,12 @@
 			files = (
 				5CD817131D2F902800E0DDAA /* NSObject+MXSwizzle.m in Sources */,
 				5C658B0B1D2F49BE00BCA4AE /* MXNetworking+Authorization.m in Sources */,
-				5C658B101D2F49BE00BCA4AE /* MXNetworking.m in Sources */,
+				5C658B101D2F49BE00BCA4AE /* MXNetworkingMethods.m in Sources */,
 				5C658B121D2F49BE00BCA4AE /* NSMutableURLRequest+Headers.m in Sources */,
 				5C658AE71D2F492000BCA4AE /* ViewController.m in Sources */,
 				5C658B111D2F49BE00BCA4AE /* NSJSONSerialization+RemovingNulls.m in Sources */,
 				5C658B0C1D2F49BE00BCA4AE /* MXNetworking+Information.m in Sources */,
 				5C658B0D1D2F49BE00BCA4AE /* MXNetworking+Logs.m in Sources */,
-				5C658B0F1D2F49BE00BCA4AE /* MXNetworking+Quick.m in Sources */,
 				5C658AE41D2F492000BCA4AE /* AppDelegate.m in Sources */,
 				5C658B0E1D2F49BE00BCA4AE /* MXNetworking+Parsing.m in Sources */,
 				5C658B131D2F49BE00BCA4AE /* RequestHeaderManager.m in Sources */,
