@@ -1,3 +1,9 @@
+# Warning!
+
+No longer maintenanced. Use [Fire-in-Swift](https://github.com/Meniny/Fire-in-Swift) instead.
+
+***
+
 <center>
 <img src="https://ooo.0o0.ooo/2017/04/21/58f9127a0d66e.jpg" alt="MXNetworking">
 </center>
